@@ -8,7 +8,7 @@ USER node
 
 RUN npm install
 
-COPY ..
+COPY . .
 
 EXPOSE 8080
 

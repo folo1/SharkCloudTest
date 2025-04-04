@@ -5,9 +5,20 @@ services:
     container_name: node_app
     build: ./node
     ports:
-      - "8080:8080"  # Maps port 8080 inside the container to port 8080 on the host
+      - "8080:8080"
     environment:
-      - NODE_ENV=production
+      - MONGO_URL=mongodb://mongo:27017/sharkinfo
+    depends_on:
+      - mongo            
+
+  # MongoDB server
+  mongo:
+    image: mongo:latest      
+    container_name: mongo
+    ports:
+      - "27017:27017"
     volumes:
-      - .:/home/node/app  
-    restart: always 
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:      

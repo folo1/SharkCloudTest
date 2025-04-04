@@ -1,14 +1,8 @@
+ {
   "name": "nodejs-image-shark",
   "version": "1.0.0",
   "description": "assignment four",
-  "author": "",
-  "license": "MIT",
   "main": "app.js",
-  "keywords": [
-    "nodejs",
-    "bootstrap",
-    "express"
-  ],
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",

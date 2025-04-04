@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:16-alpine
 
 WORKDIR /home/node/app
 
@@ -8,7 +8,7 @@ USER node
 
 RUN npm install
 
-COPY --chown=node:node . .
+COPY ..
 
 EXPOSE 8080
 

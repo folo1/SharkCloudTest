@@ -10,5 +10,4 @@ services:
       - NODE_ENV=production
     volumes:
       - .:/home/node/app  
-      - /home/node/app/node_modules 
     restart: always 
